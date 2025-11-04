@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Alunos</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+    <script th:src="@{/js/scripts.js}" defer></script>
+</head>
+<body>
+<header>
+    <p>Gestão de Alunos</p>
+</header>
+
+<main>
+    <section class="formulario">
+        <h2>Adicionar Aluno</h2>
+        <form th:action="@{/registo}" method="post" th:object="${novoAluno}">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" th:field="*{nome}" required>
+
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" th:field="*{email}" required>
+
+            <label for="idade">Idade:</label>
+            <input id="idade" type="number" min="0" th:field="*{idade}" required>
+
+            <label for="matricula">Matrícula:</label>
+            <input id="matricula" type="text" th:field="*{matricula}" required>
+
+            <button type="submit" class="btn-adicionar">Adicionar</button>
+        </form>
+    </section>
+
+    <!-- Tabela de alunos -->
+    <section class="lista">
+        <h2>Lista de Alunos
+            <span class="contador">(Total: <span th:text="${#lists.size(alunos)}">0</span> registos)</span>
+        </h2>
+        <!-- Links para ordenação -->
+        <div class="sort-links">
+            <strong>Ordenar por:</strong>
+            <a th:href="@{/registo/ordenar(sort='nome')}" class="btn-sort">Nome</a>
+            <a th:href="@{/registo/ordenar(sort='idade')}" class="btn-sort">Idade</a>
+            <a th:href="@{/registo/ordenar(sort='matricula')}" class="btn-sort">Matricula</a>
+            <a th:href="@{/registo}" class="btn-sort">Limpar Ordenação</a>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Idade</th>
+                <th>Matrícula</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="aluno, iter : ${alunos}">
+                <td th:text="${iter.index + 1}">1</td>
+                <td th:text="${aluno.nome}">Nome</td>
+                <td th:text="${aluno.email}">email</td>
+                <td th:text="${aluno.idade}">0</td>
+                <td th:text="${aluno.matricula}">matricula</td>
+                <td>
+                    <form th:action="@{/registo/remover}" method="post">
+                        <input type="hidden" name="indice" th:value="${iter.index}">
+                        <button type="submit" class="btn-remover">Remover</button>
+                    </form>
+                </td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(alunos)}">
+                <td colspan="6">Nenhum aluno registado.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>Autoria - Grupo: Anderson, Bruno, Cristiane e Paulina UFCD 10791 - Desenvolvimento de aplicações web em JAVA </p>
+</footer>
+</body>
+</html>
