@@ -65,6 +65,7 @@ src/
          └── application.properties
 
 ⚙️ Configuração do Projeto
+
 1️⃣ Clonar o repositório
 git clone https://github.com/seu-usuario/sistema-alunos.git
 cd sistema-alunos
