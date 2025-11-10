@@ -40,29 +40,32 @@ Bootstrap 5 (para o layout)
 
 ✅ Layout simples e responsivo com Bootstrap
 
-🗃️ Estrutura do Projeto
 ```
-src/
-└── main/
-├── java/com/exemplo/alunos/
-│ ├── controller/
-│ │ └── AlunoController.java
-│ ├── model/
-│ │ └── Aluno.java
-│ ├── repository/
-│ │ └── AlunoRepository.java
-│ ├── service/
-│ │ └── AlunoService.java
-│ └── Application.java
-└── resources/
-├── templates/
-│ ├── index.html
-│ ├── form.html
-│ └── listar.html
-├── static/
-│ └── css/
-│ └── style.css
-└── application.properties
+🗃️ Estrutura do Projeto
+📂 src
+└── 📂 main
+├── 📂 java
+│ └── 📂 com
+│ └── 📂 exemplo
+│ └── 📂 alunos
+│ ├── 📂 controller
+│ │ └── 📄 AlunoController.java
+│ ├── 📂 model
+│ │ └── 📄 Aluno.java
+│ ├── 📂 repository
+│ │ └── 📄 AlunoRepository.java
+│ ├── 📂 service
+│ │ └── 📄 AlunoService.java
+│ └── 📄 Application.java
+└── 📂 resources
+├── 📂 templates
+│ ├── 📄 index.html
+│ ├── 📄 form.html
+│ └── 📄 listar.html
+├── 📂 static
+│ └── 📂 css
+│ └── 📄 style.css
+└── 📄 application.properties
 ```
 ⚙️ Configuração do Projeto
 
