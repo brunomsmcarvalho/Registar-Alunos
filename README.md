@@ -41,7 +41,7 @@ Bootstrap 5 (para o layout)
 ✅ Layout simples e responsivo com Bootstrap
 
 🗃️ Estrutura do Projeto
-'''
+```
 src/
 └── main/
 ├── java/com/exemplo/alunos/
@@ -63,7 +63,7 @@ src/
 │ └── css/
 │ └── style.css
 └── application.properties
-'''
+```
 ⚙️ Configuração do Projeto
 
 1️⃣ Clonar o repositório
