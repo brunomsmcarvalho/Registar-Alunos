@@ -170,7 +170,7 @@ Bruno, Anderson, Paulina, Cristiane
 
 🔗 [LinkedIn](https://www.linkedin.com/in/bruno-carvalho-a2062688/)
 
-🐙 GitHub
+🐙 [Portfólio](https://brunomcarvalho.ct.ws) 
 
 📄 Licença
 
